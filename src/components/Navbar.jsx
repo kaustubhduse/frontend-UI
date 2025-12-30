@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Button from './common/Button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -109,31 +110,28 @@ const Navbar = () => {
       </div>
 
       {/* Connect Wallet Button (Desktop Only) */}
-      <motion.button
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="absolute flex items-center justify-center font-clash font-semibold text-black max-md:hidden"
+      <Button
+        className="absolute flex items-center justify-center font-clash font-semibold max-md:hidden"
         style={{
           width: '172px',
           height: '48px',
           top: '45px',
           left: '1148px',
-          background: '#FFFFFF',
-          borderRadius: '4px',
           fontSize: '16px',
           lineHeight: '18px',
           letterSpacing: '0.2px',
           textAlign: 'center',
-          border: 'none',
-          cursor: 'pointer',
+          color: '#000000',
           zIndex: 50,
+        }}
+        animationProps={{
+           initial: { opacity: 0, x: 20 },
+           animate: { opacity: 1, x: 0 },
+           transition: { duration: 0.5, delay: 0.2 }
         }}
       >
         <span>Connect Wallet</span>
-      </motion.button>
+      </Button>
     </>
   );
 };

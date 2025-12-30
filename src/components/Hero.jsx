@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Button from './common/Button';
 
 const Hero = () => {
   return (
@@ -61,13 +62,8 @@ const Hero = () => {
         Create, Explore, & Collect Digital Art NFTs
       </motion.p>
 
-      {/* Explore Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+      <Button
+        variant="gradient"
         className="absolute font-clash font-semibold text-white uppercase flex items-center justify-center max-md:!static max-md:mx-auto max-md:mt-8 max-md:mb-12"
         style={{
           width: '224px',
@@ -78,15 +74,16 @@ const Hero = () => {
           lineHeight: '125%',
           letterSpacing: '0%',
           borderRadius: '10px',
-          background: 'linear-gradient(152.64deg, #DD24E1 0%, #5117F4 100%)',
-          border: 'none',
-          cursor: 'pointer',
-          zIndex: 30,
           transform: 'skewX(-10deg)',
+        }}
+        animationProps={{
+          initial: { opacity: 0, scale: 0.9 },
+          animate: { opacity: 1, scale: 1 },
+          transition: { duration: 0.5, delay: 0.6 }
         }}
       >
         <span style={{ transform: 'skewX(10deg)' }}>Explore</span>
-      </motion.button>
+      </Button>
 
       {/* Hero Image Wrapper - Removed fixed height on mobile to let content dictate size */}
       <motion.div 

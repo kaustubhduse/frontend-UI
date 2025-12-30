@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import Button from './common/Button';
 
 const CTA = () => {
   return (
@@ -45,13 +46,8 @@ const CTA = () => {
         Join the community and get the best NFT collection
       </div>
 
-      <motion.button
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+      <Button
+        variant="gradient"
         className="absolute font-clash font-semibold text-white uppercase flex items-center justify-center max-md:!static max-md:mx-auto max-md:mt-8 max-md:mb-16"
         style={{
           width: '310px',
@@ -62,14 +58,16 @@ const CTA = () => {
           lineHeight: '125%',
           letterSpacing: '6%',
           borderRadius: '10px',
-          background: 'linear-gradient(152.64deg, #DD24E1 0%, #5117F4 100%)',
-          border: 'none',
-          cursor: 'pointer',
-          zIndex: 30,
+        }}
+        animationProps={{
+          initial: { opacity: 0, y: 30 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true },
+          transition: { duration: 0.5, delay: 0.2 }
         }}
       >
         Join Community
-      </motion.button>
+      </Button>
     </>
   );
 };

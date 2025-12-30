@@ -1,5 +1,7 @@
 
 import { motion } from 'framer-motion';
+import Button from './common/Button';
+import SectionHeading from './common/SectionHeading';
 
 const BitcoinSection = () => {
   return (
@@ -42,27 +44,15 @@ const BitcoinSection = () => {
 
       {/* Bitcoin Art Work Heading */}
       {/* Bitcoin Art Work Heading */}
-      <motion.h2
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+      <SectionHeading 
+        text="Bitcoin Art Work"
+        top="1305px"
+        left="825px"
+        width="335px"
+        fontSize="72px"
+        style={{ height: '180px', lineHeight: '125%', fontWeight: 500, letterSpacing: '0.2px' }}
         className="absolute font-clash text-white max-md:!static max-md:!w-full max-md:!h-auto max-md:text-center max-md:mt-4 max-md:text-[40px] max-md:px-4"
-        style={{
-          width: '335px',
-          height: '180px',
-          top: '1305px',
-          left: '825px',
-          fontSize: '72px',
-          fontWeight: 500,
-          lineHeight: '125%',
-          letterSpacing: '0.2px',
-          verticalAlign: 'middle',
-          zIndex: 30,
-        }}
-      >
-        Bitcoin Art Work
-      </motion.h2>
+      />
 
       {/* Artist Credit */}
       {/* Artist Credit */}
@@ -146,40 +136,31 @@ const BitcoinSection = () => {
 
       {/* View Art Work Button */}
       {/* View Art Work Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+      <Button
         className="absolute font-clash font-semibold flex items-center justify-center max-md:!static max-md:mx-auto max-md:mt-6"
         style={{
           width: '203px',
           height: '54px',
           top: '1764px',
           left: '825px',
-          background: '#FFFFFF',
-          color: '#000000',
-          borderRadius: '4px',
-          padding: '15px 24px',
-          gap: '10px',
           fontSize: '16px',
-          fontWeight: 600,
           lineHeight: '150%',
           letterSpacing: '0.2px',
           textAlign: 'center',
-          verticalAlign: 'middle',
-          border: 'none',
-          cursor: 'pointer',
-          zIndex: 30,
+          color: '#000000',
+        }}
+        animationProps={{
+           initial: { opacity: 0, scale: 0.9 },
+           whileInView: { opacity: 1, scale: 1 },
+           viewport: { once: true },
+           transition: { duration: 0.5, delay: 0.4 }
         }}
       >
         <span>View Art Work</span>
-        <div style={{ width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: '10px' }}>
           <img src="/arrow-image.png" alt="Arrow" style={{ width: '12px', height: '12px', maxWidth: 'none' }} />
         </div>
-      </motion.button>
+      </Button>
 
       {/* Auction Timer Section */}
       <div className="absolute max-md:!static max-md:mx-auto max-md:mt-6 max-md:w-fit max-md:flex max-md:flex-col max-md:items-center" style={{ top: '1601px', left: '1068px', zIndex: 30 }}>
