@@ -89,7 +89,7 @@ const BitcoinSection = () => {
       </motion.div>
 
       {/* Current Bid Section */}
-      <div className="absolute max-md:!static max-md:mx-auto max-md:mt-6 max-md:!w-[144px] max-md:!h-[98px] max-md:relative" style={{ top: '1601px', left: '824px', width: '144px', height: '98px', zIndex: 30 }}>
+      <div className="absolute max-md:!static max-md:mx-auto max-md:mt-6 max-md:!w-[144px] max-md:!h-[98px] max-md:relative" style={{ top: '1601px', left: '824px', width: '200px', height: '120px', zIndex: 30 }}>
         {/* Label */}
         <div className="absolute font-clash font-medium text-white max-md:static" style={{
           width: '93px',
@@ -105,22 +105,23 @@ const BitcoinSection = () => {
 
         {/* ETH Amount */}
         <div className="absolute font-clash font-medium text-white max-md:static" style={{
-          width: '143px',
+          width: 'auto',
           height: '45px',
-          top: '29px',
+          top: '35px',
           left: '1px',
           fontSize: '36px',
           lineHeight: '125%',
-          letterSpacing: '0.2px'
+          letterSpacing: '0.2px',
+          whiteSpace: 'nowrap'
         }}>
           1.09 ETH
         </div>
 
         {/* USD Amount */}
         <div className="absolute font-clash font-medium text-white max-md:static" style={{
-          width: '51px',
+          width: 'auto',
           height: '20px',
-          top: '78px',
+          top: '90px',
           left: '0px',
           fontSize: '16px',
           lineHeight: '125%',
